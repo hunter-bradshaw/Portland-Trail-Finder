@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./css/main.css">
+
+    <meta charset='utf-8' />
+    <title>PDX Trail Finder</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <!--    Add Leaflet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
+
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://unpkg.com/mapbox-gl-leaflet@0.0.3/leaflet-mapbox-gl.js"></script>
+
+    <!-- jquery -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- park trails -->
+
+    <script src="./data/Parks_Trails.js"></script>
+
+    <!-- font awesome -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+
+</head>
+
+<body>
+
+
+    <div class="app-container">
+        <div class="navbar">
+
+            <div id="title">Portland Trail Finder</div>
+            <div id="spacer"></div>
+            <div>About</div>
+            <div>Contact</div>
+
+        </div>
+        <div class="side-pane">
+
+            <div>
+                <!--               remember to credit-->
+                <img id="hikers" src="https://static.rootsrated.com/image/upload/s--h_LP6gtg--/t_rr_large_natural/huu4mqltqwbnqahltvly.jpg">
+            </div>
+
+
+            <b>Click on a Trail you Want to Explore!</b>
+            <p><p>
+            <b>Use the balloon icon in the top left corner of the map to get your current location.</b><p></p>
+            <b><h4>Click anywhere to get your coordinates</h4></b>
+            <div>
+                <p>Your Latitude is: </p>
+                <p id="lat"></p>
+                <p>Your Longitude is: </p>
+                <p id="lng"></p>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <div id="map"></div>
+
+        </div>
+    </div>
+
+
+    <script src="./js/map.js"></script>
+    <script src="./js/main.js"></script>
+
+
+</body></html>
